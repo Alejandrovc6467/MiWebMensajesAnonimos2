@@ -1,0 +1,153 @@
+
+/*https://www.youtube.com/watch?v=xQstBIPeOdU&ab_channel=YoelvisMulen%7Bcode%7D  la idea de mi header*/
+.header{
+
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    background-color: rgba(0, 0, 0, 0.133);
+    backdrop-filter: blur(20px);/**/
+    box-shadow: 0px 0px 50px 50px rgba(0, 0, 0, 0.133);/**/
+    border-bottom: 1px solid var(--border-color);
+    
+}
+
+.header_nav{
+    display: flex;
+    justify-content: space-between;
+    /* Por si quisiera que mi nav so sea mayor a 1000px, esto para que no se alargue en pantallas de 3000px, podria lo mismo para todos los contenedores mi pagina, luego lo pienso
+    max-width: 1000px;
+    margin: 0px auto; el auto es primordial de esta forma para poder hacerlo*/
+}
+
+
+/*Logo */
+.header_nav_logo a {
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    font-style: italic;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: -1PX;
+    padding-left: 25px;
+}
+
+.header_nav_logo a:hover{
+    transform: scale(1.1);
+    transition: 0.6s;
+   
+}
+
+
+/*Logo animation*/
+.header_nav_logo span {
+    display: inline-block;
+    animation: logo-anim 1s infinite;
+    animation-delay: calc(0.1s * var(--item));
+    text-shadow: 2px 0px 20px #e3eeef30;
+    animation-duration: 5s;
+}
+
+@keyframes logo-anim {
+    0%,
+    80%,
+    50% {
+        transform: rotate(360deg);
+    }
+    55% {
+        transform: rotate(90deg);
+    }
+}
+
+
+/*Menu items*/
+.header_nav_menu{
+    display: flex;
+    align-items: center;
+}
+
+.header_nav_menu a {
+    /*text-decoration: none;/**/  
+    /*margin-right: 25px;/**/
+    /*color: var(--whiteColor-text);/**/
+    color: white;
+    font-size: 15px;
+    /*text-transform: uppercase;/*esto es para que se ponga en letras mayusculas, tambien esta lowercase como en java (pero bueno esto lo pude haber escrito es mayusculas en el html da lo mismo)*/
+    padding: 0 25px;/*0 arriba y abajo   10px hacia los lados*/
+    letter-spacing: 1px;/*esto me crea una separacion por letra de 2px*/
+}
+
+
+
+.header_nav_menu a:hover {
+    text-shadow: 0 0 10px #0691e83f, 0 0 5px #ffffffc8;
+    transform: scale(1.1);
+    transition: 0.6s;
+}
+
+.header_nav_menu a:active {
+    transform: scaleX(10px);
+}
+
+/*header__toggle buttom*/
+.header_nav_toggle{
+    color: #ffffff;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    margin-right: 25px;
+    display: none;
+}
+
+.header_nav_toggle:hover{
+    text-shadow: 0 0 10px #0691e880, 0 0 5px #ffffff;
+    transform: scale(1.1);
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.header_nav_toggle:active{
+    transform: rotate(45deg);
+}
+
+
+/*media query*/
+@media all and (max-width:980px) {
+
+    /*cuando tengo menos de 785 hago las configuraciones pero lo mantengo oculto al lado derecho*/
+   .header_nav_menu{
+    
+        flex-direction: column;
+        width: 100%;
+        position: fixed;/*para que la pos no dependa del contendor donde se encuentr*/
+        top: 59px;
+        z-index: 1;
+        overflow-y: auto;/*un scroll por si hay muchos items y el dispositivo es muy pequenio*/
+        height: 100%;
+        left: 100%;/*cuando no este activo, posicionelo todo a la derecho, para que no se vea*/
+        /*transition: left 1s;/*hagame una transition cuando el left se modifique*/
+    }
+
+    .header_nav_menu_visible{
+        left: 0;/*cunado presione el boton llamo a este clase en js, y posiciono el nav donde va*/
+        transition: left 1s;/*hagame una transition cuando el left se modifique*/
+    }  
+    
+    .header_nav_toggle{
+        display: block;/*muestreme el boton toggle*/
+    }
+
+    .header_nav_menu a {
+       margin: 20px;
+       font-size: 17px;
+    }
+
+    /*Este eso para controlar el tema del backdrop, es un detalle se llama en el js*/
+    .header_new{
+        height: 100%;
+    }
+
+}

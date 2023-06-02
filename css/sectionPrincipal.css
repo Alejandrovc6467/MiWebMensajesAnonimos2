@@ -1,0 +1,413 @@
+
+
+/*home **************************************/
+.sectionPrincipal{
+    margin-top: 20px;/**/
+    /*height: calc(100vh - 60px);/*mnos 80 del margin*/
+    height: auto;
+    width: 100%;
+
+    display: flex;
+}
+
+/*sectionPrincipal social links*/
+.sectionPrincipal_socialLinks{
+    width: 5%;
+    font-size: 1.4rem;
+}
+
+.container_sectionPrincipal_socialLinks{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 3rem;
+}
+
+.sectionPrincipal_socialLinks a {
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.sectionPrincipal_socialLinks a:hover {
+    transform: scale(1.2);
+    transition: 0.6s;
+    color: white;
+}
+
+/*sectionPrincipal info*/
+.sectionPrincipal_info{
+    width: 40%;
+}
+
+.container_sectionPrincipal_info{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   height: 100%;
+   padding-left: 10%;
+}
+
+.sectionPrincipal_text_1{
+    font-family: var(--Open-Sans);
+    font-weight: 700;/**/
+    font-size: 2rem;
+    color: white;
+   
+}
+
+.sectionPrincipal_text_2{
+    font-family: var(--PT-Sans);
+    font-weight: 700;/**/
+    font-size: 3.2rem;/**/
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.sectionPrincipal_text_3{
+    font-family: var(--Open-Sans);
+    font-weight: 500;/**/
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 1rem;
+    letter-spacing: .2rem;
+}
+
+.sectionPrincipal_text_4{
+    font-family: var(--Open-Sans);
+    font-weight: 500;/**/
+    font-size: 0.8rem;
+    
+    color: white;/**/
+    color: var(--whiteColor-text);/**/
+}
+
+.cv_button, .contact_button{
+
+    font-family: var(--Open-Sans);
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.942);
+    font-size: 0.8rem;
+    font-weight: 200;
+    letter-spacing: .1rem;/**/
+    border-radius: 5rem;
+    padding: 5px 7px;/**/
+    
+    margin: 25px 10px 0 0;
+    width: 150px;
+
+}
+
+.cv_button{
+    color: #0059a6;
+    border: 2px solid #0059a6;
+    background: transparent;
+    font-weight: bold;
+}
+
+.contact_button{
+    background-color: #77838d66;
+    border: none;
+}
+
+.cv_button:hover, .contact_button:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: 0.6s;
+}
+
+
+
+/* sectionPrincipal chat /////////////////////////////////////////*/
+.sectionPrincipal_chat{
+    /*background-color: yellow;/**/
+    width: 55%;
+    
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*padding-bottom: 200px;/**/
+    
+}
+
+.chat{
+
+    display: flex;
+    /*flex-direction: column;/**/
+    flex-flow: column nowrap;
+
+   /* flex-flow: row wrap;/*ESte flex-flow abarca tanto "flex-drirection" como "flex-wrap" es como una fusion de los dos, por eso se uso este, pero puedo usar los otros dos en vez de este sin problema*/
+    
+   padding: 10px 10px 0 10px;/**/
+
+   background-color: rgba(99, 99, 99, 0.24);/**/
+    border-radius: 20px;/**/
+    /*background-color: var(--theme-bg-color);/**/
+    width: 45%;/*45*/
+    height: 55%;/*65*/
+    max-height: 600px;/**/
+    max-width: 650px;/**/
+
+    position: relative;/*solo para poner el contador en posicion absoluta y acomodarlo mejor*/
+    
+}
+
+.chat_contador{
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    font-size: 12px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--content-bg);/**/
+    /*background-color: black;/**/
+    color: var(--whiteColor-text);
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);/**/
+    backdrop-filter: blur(20px);
+}
+
+.chat_listaMensajes{
+    /*background-color: forestgreen;/**/
+    height: 80%;/**/
+    width: 100%;
+    padding: 15px 10px;
+}
+
+.chat_listasMensajes_container{
+    /*background-color: orange;/**/
+    overflow-y: auto;/**/
+    overflow-x: auto;/**/
+    height: 100%;
+}
+
+.chat_mensaje{
+    /*background-color: rgba(75, 75, 75, 0.403);/**/
+    background-color: var(--content-bg);/**/
+    border-bottom: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    overflow-y: auto;/**/
+    overflow-x: auto;/**/
+    
+}
+
+
+.fechaHora{
+
+    color: rgba(255, 255, 255, 0.414);
+    font-size: 12px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--border-color);
+
+}
+
+.chat_text{
+    color: white;
+}
+
+.chat_formulario{
+
+    height: 20%;
+    width: 100%;
+    /*background-color: #0059a6;/**/
+    border-top: 3px solid var(--border-color);
+   
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+form{
+    /*background-color: pink;/**/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+   
+}
+
+textarea{
+    font: inherit;
+    width: 85%;
+    height: 50px;
+    resize: none;
+    border-radius: 25px;
+    padding: 10px 15px;
+    border: none;
+    background-color: var(--content-bg);
+    color: white;
+    margin-right: 10px;
+    
+}
+
+textarea::placeholder {
+    color:var(--whiteColor-text); /* Cambia el color aquí */
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 20;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    
+}
+
+textarea:focus::placeholder {
+    opacity: 0;
+}
+
+.chat_button{
+    width: 52px;
+    height: 52px;
+    margin-right: 2.5%;/**/
+    border: none;
+    background-color: var(--content-bg);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer; 
+    transition: transform 1s;
+}
+.chat_button:hover{
+    /*transform: rotate(20deg) scale(1.05);/**/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.chat_button i {
+    font-size: 24px; /* Ajusta el tamaño del icono */
+    line-height: 1; /* Ajusta la altura de línea para centrar el icono verticalmente */
+    text-align: center; /* Centra horizontalmente el icono */
+    color: white;
+}
+
+/*button animation*/
+.chat_button span {
+    display: inline-block;
+    animation: button-anim 1s infinite;
+    animation-delay: calc(0.1s * var(--item));
+    text-shadow: 2px 0px 20px #e3eeef30;
+    animation-duration: 5s;
+}
+
+@keyframes button-anim {
+    0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+}
+
+/*///////////////////////////////////////////////////////////////*/
+
+
+
+
+/*media query*/
+@media all and (max-width:980px) {
+
+    /*sectionPrincipal info*/
+   .sectionPrincipal{
+      flex-direction: column;
+      height: auto;
+   }
+    
+   .sectionPrincipal_info{
+        margin-top: 50px;
+        width: 100%;
+        order: 1;
+    }
+
+   
+    .container_sectionPrincipal_info{
+        padding: 15px 0;
+        text-align: center;
+    }
+
+    .sectionPrincipal_text_4{
+        display: none;
+    }
+
+    .contact_button{
+        display: none;
+    }
+
+    .cv_button{
+        margin-top: 0px;
+        margin-right: 0px;
+    }
+      
+    /* inicio chat ///////////////////////////////////*/
+    .sectionPrincipal_chat{
+        width: 100%;
+        height: 500px;
+        padding: 20px 0;/**/
+
+        order: 3;
+    }
+
+    .chat{
+        width: 90%;
+        height: 90%;
+    }
+
+
+    /*fin chat /////////////////////////////////////////*/
+
+
+    /*social links*/
+    .sectionPrincipal_socialLinks{
+        width: 100%;
+        order: 2;
+    }
+
+    .container_sectionPrincipal_socialLinks{
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 15px;
+        padding-bottom: 0px;
+    }
+
+    .sectionPrincipal_socialLinks a {
+        padding: 0 15px;
+        color: rgba(255, 255, 255, 0.682);
+    }
+
+}
+
+
+
+@media all and (max-width:640px) {
+
+   
+
+    .sectionPrincipal_text_1{
+        font-size: 1.5rem;
+    }
+    
+    .sectionPrincipal_text_2{
+        font-size: 2.2rem;/**/
+    }
+    
+    .sectionPrincipal_text_3{
+        font-size: 0.7rem;
+    }
+
+}
+
+

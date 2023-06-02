@@ -1,0 +1,49 @@
+
+.sectionMotivacional{
+    border-top: 3px solid var(--border-color);
+    margin: 0 7vw;/**/
+    padding: 50px 0;
+}
+
+.sectionMotivacional_text_1{
+    font-family: var(--PT-Sans);
+    font-weight: 700;/**/
+    font-size: 3.2rem;/**/
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.sectionMotivacional_text_2{
+    font-family: var(--Open-Sans);
+    font-weight: 700;/**/
+    font-size: 2rem;
+    color: white;
+}
+
+.sectionMotivacional_text_3{
+    font-family: var(--Open-Sans);
+    font-weight: 500;/**/
+    font-size: 0.8rem;
+    
+    margin-top: 20px;
+    color: white;/**/
+    color: var(--whiteColor-text);/**/
+}
+
+
+@media all and (max-width:640px) {
+
+   
+
+    .sectionMotivacional_text_1{
+        font-size: 2rem;/**/
+        /*font-size: 50px;/**/
+    }
+    
+    .sectionMotivacional_text_2{
+        font-size: 1.2rem;/**/
+    }
+    
+    
+
+}

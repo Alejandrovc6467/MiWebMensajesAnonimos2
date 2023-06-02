@@ -1,0 +1,36 @@
+
+.sectionAbout{
+    border-top: 3px solid var(--border-color);
+    margin: 0 7vw;/**/
+    padding: 50px 0;
+    /*text-align: center;/**/
+}
+
+.sectionAbout_title{
+    font-family: var(--PT-Sans);
+    font-weight: 700;/**/
+    font-size: 3.2rem;/**/
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+
+
+.sectionAbout_text_3{
+    font-family: var(--Open-Sans);
+    font-weight: 500;/**/
+    font-size: 0.8rem;
+    
+    margin-top: 20px;
+    color: white;/**/
+    color: var(--whiteColor-text);/**/
+}
+
+
+@media all and (max-width:640px) {
+
+    .sectionAbout_title{
+        font-size: 2rem;
+    }
+
+}

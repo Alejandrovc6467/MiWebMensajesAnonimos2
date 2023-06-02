@@ -1,0 +1,130 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;/*para que las cajas no se desborden unas con otras*/
+}
+
+
+:root {
+  --theme-bg-color: rgba(16, 18, 27, 0.496);/*original*/
+  /*--theme-bg-color: rgba(9, 71, 55, 0.418);/**/
+  --border-color: rgba(113 119 144 / 25%);
+  --theme-color: #f9fafb;
+  --inactive-color: rgba(35, 38, 51, 0.78);
+  --body-font: "Poppins", sans-serif;
+  --hover-menu-bg: rgba(12 15 25 / 30%);
+  --content-title-color: #999ba5;
+  --content-bg: rgb(146 151 179 / 13%);
+  --button-inactive: rgb(249 250 251 / 55%);
+  --dropdown-bg: #21242d;
+  --dropdown-hover: rgb(42 46 60);
+  --popup-bg: rgb(22 25 37);
+  --search-bg:  #14162b;
+  --overlay-bg: rgba(36, 39, 59, 0.3);
+  --scrollbar-bg: rgb(1 2 3 / 40%);
+
+  /*fonts*/
+  --whiteColor-text:  rgba(240, 248, 255, 0.636);
+  --PT-Sans: 'PT Sans', sans-serif; 
+  --Open-Sans: 'Open Sans', sans-serif; 
+ }
+
+
+/*/////////////////////  MODOFICACIONES AL SCROLL BAR ORIGINAL   /////////////////////////////////*/
+
+/* width */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Toda la linea */
+  ::-webkit-scrollbar-track {
+    background: #00000000;
+  }
+   
+  /* indicador */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.250); 
+    border-radius: 10px;
+    
+    
+  }
+  
+  /* indicador hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(67, 93, 114, 0.574); 
+  }
+
+ 
+/*MODOFICACIONES AL SCROLL BAR ORIGINAL   /////////////////////////////////*/
+
+
+
+
+
+a{
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a:hover{
+  text-shadow: 0 0 10px #f7c0c0f3, 0 0 5px #ffffff49;
+  transition: 0.3s;
+}
+
+p{
+  color: rgba(255, 255, 255, 0.658); 
+}
+  
+
+   
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -2;
+    
+
+  }
+  
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;/**/
+  }
+
+  /*este span su unica funcion es darlr el color oscuro y el blur a mi pagina*/
+  .span{
+    background-color: var(--theme-bg-color);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    width: 100%;
+    height: 100%;
+    position: fixed;/**/
+    top: 0;
+    left: 0;
+    overflow: auto;
+    z-index: -1;
+  
+  }
+  
+
+
+body{
+
+    /*background: #c31432;  /* fallback for old browsers */
+    /*background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+    /*background: linear-gradient(to right , #240b36, #c31432, yellow); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Montserrat', sans-serif;
+    /*background: url(../assets/fondo.jpg) ;/**/
+    background-position: center;/*centro la imagen*/
+    background-attachment: fixed;
+    background-size: cover;/**/
+    
+    
+    
+}
+    

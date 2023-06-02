@@ -1,0 +1,91 @@
+
+footer{
+
+    border-top: 3px solid var(--border-color);
+
+    display: flex;
+    /*flex-direction: column;/*este hace lo mismo que el de abajo(no se porque use el de abajo y no este)*/
+    /*flex-wrap: nowrap;/*El nowrap(no me respeta los anchos de los elementos, los encoje todos para dejarlos en una misma fila)  ES PARA QUE SE ADAPTE SEGUN EL TAMANIO ESTABLECIDO*/
+    flex-flow: row nowrap;/*ESte flex-flow abarca tanto "flex-drirection" como "flex-wrap" es como una fusion de los dos, por eso se uso este, pero puedo usar los otros dos en vez de este sin problema*/
+    text-align: center;
+    align-items: center;
+    height: 10vh;
+}
+
+
+    .derechos{
+        font-size: 9px;
+        letter-spacing: 2px;
+        flex: 1 1 auto;
+
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 50px;
+    }
+
+
+
+    .redes{
+        flex: 2 1 auto;
+        display: flex;
+        justify-content: center;
+    }
+
+            .redes a{
+                color: rgba(255, 255, 255, 0.658); 
+                padding-left: 20px;
+                padding-right: 20px;
+                font-size: 11px;
+                letter-spacing: 2px;
+            }
+
+        
+
+    .disenado{
+            
+        font-size: 9px;
+        letter-spacing: 2px;
+        flex: 1 1 auto;
+
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 50px;
+           
+    }
+        .nameDesigned{
+            color: rgb(255, 255, 255);
+            font-style: italic;/**/
+            font-family: 'Anton', sans-serif;/**/
+            /*font-size: 12px;/**/
+            letter-spacing: 0.5PX;   
+        }
+
+
+
+
+
+@media all and (max-width:640px){
+
+    footer{
+        flex-flow: column nowrap;/*ESte flex-flow abarca tanto "flex-drirection" como "flex-wrap" es como una fusion de los dos, por eso se uso este, pero puedo usar los otros dos en vez de este sin problema*/
+        height: auto;          
+    }
+
+    .disenado{
+        order: 1;/*Para cambiar el orden porque no me gusta cunado pasa a colimna, lo prefiero asi como lo estoy dejando*/
+        margin: 0 0 15px 0;
+    }
+
+    .derechos{
+        order: 2;
+        margin: 0 0 15px 0;
+    }
+
+    .redes{
+        flex: 1 1 auto;/*Sin la media estaba 2 1 auto*/
+        order: 0;
+        margin: 20px 0 15px 0;
+    }
+
+}
+
