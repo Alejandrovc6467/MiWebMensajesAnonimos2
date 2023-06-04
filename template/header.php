@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="css/sectionPrincipal.css?1111111">
         <link rel="stylesheet" href="css/sectionMotivacional.css">
         <link rel="stylesheet" href="css/sectionAbout.css">
-        <link rel="stylesheet" href="css/login.css?4">
+        <link rel="stylesheet" href="css/login.css?45">
         <link rel="stylesheet" href="css/footer.css?9258451">
         
         <!--fonts-->

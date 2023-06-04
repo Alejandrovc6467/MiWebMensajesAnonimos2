@@ -42,6 +42,7 @@
     color:var(--whiteColor-text); /* Cambia el color aquí */
     text-align: center;
     position: absolute;
+    font-size: 12px;
     top: 50%;
     left: 20;
     transform: translateY(-50%);
@@ -69,9 +70,11 @@
     background-color: rgba(207, 207, 207, 0.604);/**/
     color: rgba(255, 255, 255, 0.701);
     border-radius: 25px;
-    padding: 5px 50px 5px 50px;
+    padding: 5px 10px 5px 10px;
     border-color: none;
-    width: 100%;
+    width: 50%;
+    margin-top: 10px;
+    font-size: 15px;
     height: 30px;
     background-color: #77838d66;
     border: none;
