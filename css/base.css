@@ -6,8 +6,8 @@
 
 
 :root {
-  --theme-bg-color: rgba(16, 18, 27, 0.496);/*original*/
-  /*--theme-bg-color: rgba(9, 71, 55, 0.418);/**/
+  --theme-bg-color: rgba(16, 18, 27, 0.496); /*original*/
+  /* --theme-bg-color: rgba(9, 42, 55, 0.467); */
   --border-color: rgba(113 119 144 / 25%);
   --theme-color: #f9fafb;
   --inactive-color: rgba(35, 38, 51, 0.78);
@@ -123,8 +123,7 @@ body{
     background-position: center;/*centro la imagen*/
     background-attachment: fixed;
     background-size: cover;/**/
+
     
-    
-    
-}
-    
+      
+}    

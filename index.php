@@ -3,6 +3,7 @@
 
 <?php include("viewsSections/sectionPrincipal.php"); ?>
 <?php include("viewsSections/sectionAbout.php"); ?>
+<?php include("viewsSections/sectionGalery.php"); ?> 
 <?php include("viewsSections/sectionMotivacional.php"); ?> 
 
 

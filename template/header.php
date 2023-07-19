@@ -10,13 +10,15 @@
         <title>Alejandro Vasquez</title>
 
         <!--styles-->
-        <link rel="stylesheet" href="css/base.css?928786">
-        <link rel="stylesheet" href="css/header.css?916808">
-        <link rel="stylesheet" href="css/sectionPrincipal.css?1111111">
-        <link rel="stylesheet" href="css/sectionMotivacional.css">
-        <link rel="stylesheet" href="css/sectionAbout.css">
-        <link rel="stylesheet" href="css/login.css?45">
-        <link rel="stylesheet" href="css/footer.css?9258451">
+        <link rel="stylesheet" href="css/base.css?92878286">
+        <link rel="stylesheet" href="css/header.css?9168808">
+        <link rel="stylesheet" href="css/sectionPrincipal.css?11118111">
+        <link rel="stylesheet" href="css/sectionMotivacional.css?8">
+        <link rel="stylesheet" href="css/modal_image.css?855">
+        <link rel="stylesheet" href="css/sectionGalery.css?168">
+        <link rel="stylesheet" href="css/sectionAbout.css?34">
+        <link rel="stylesheet" href="css/login.css?435">
+        <link rel="stylesheet" href="css/footer.css?92358451">
         
         <!--fonts-->
         <link href="https://fonts.googleapis.com/css2?family=Anton&family=Days+One&family=Poppins:wght@500;600;900&display=swap" rel="stylesheet">
@@ -30,9 +32,17 @@
 
 <body>
 
+    <!--modal image-->
+    <div class="ful-img" id="fulImgBox">
+        <img src="" id="fulImg" alt="">
+        <span onclick="closeImg()">X</span>
+        <p class="full_image_fecha"></p>
+    </div>
+
 
     <div class="video-container">
         <video autoplay loop muted>
+            <!--como lo tomo de mi github es asi     https://alejandrovc6467.github.io/x/assets/videoBackground.mp4  -->
           <source src="assets/videoBackground.mp4" type="video/mp4">
         </video>
     </div>

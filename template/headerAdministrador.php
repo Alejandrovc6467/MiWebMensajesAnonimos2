@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="css/base.css?9286">
         <link rel="stylesheet" href="css/header.css?9268">
         <link rel="stylesheet" href="css/footer.css?9284">
-        <link rel="stylesheet" href="css/administrador.css?92814">
+        <link rel="stylesheet" href="css/administrador.css?9882814">
         <link href="https://fonts.googleapis.com/css2?family=Anton&family=Days+One&family=Poppins:wght@500;600;900&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/0cf3687c78.js" crossorigin="anonymous"></script><!--link de los icnos, los estoy ultilizando en linea-->
         <link rel="shortcut icon" href="imagenes/avIcon.png" type="image/x-icon"><!--link del icono de la pestania-->

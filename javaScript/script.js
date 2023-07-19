@@ -1,6 +1,9 @@
 
 
 
+
+
+
 /* Funcion para mostrar y oculatr el  menu */
 const navToggle = document.querySelector(".header_nav_toggle");
 const navMenu = document.querySelector(".header_nav_menu");
@@ -26,6 +29,25 @@ function closeOpenNavMenu() {
 navMenuList.forEach(element => {/* recorro mi lista para aplicarle el addEvent */
   element.addEventListener("click", closeOpenNavMenu);
 });
+
+
+
+
+// de aqui hacia abajo es del modal
+
+const fulImgBox = document.getElementById("fulImgBox"),
+fulImg = document.getElementById("fulImg");
+
+function openFulImg(reference){
+  fulImgBox.style.display = "flex";
+  fulImg.src = reference
+}
+
+function closeImg(){
+  fulImgBox.style.display = "none";
+}
+
+
 
 
 
