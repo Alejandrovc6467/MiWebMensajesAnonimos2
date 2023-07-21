@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="css/sectionPrincipal.css?11118111">
         <link rel="stylesheet" href="css/sectionMotivacional.css?8">
         <link rel="stylesheet" href="css/modal_image.css?855">
-        <link rel="stylesheet" href="css/sectionGalery.css?168">
+        <link rel="stylesheet" href="css/sectionGalery.css?1636788">
         <link rel="stylesheet" href="css/sectionAbout.css?34">
         <link rel="stylesheet" href="css/login.css?435">
         <link rel="stylesheet" href="css/footer.css?92358451">

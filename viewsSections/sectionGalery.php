@@ -8,8 +8,7 @@ $listaImagenes=$sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);//con esta fetch  almac
 
 <div class="sectionGalery">
 
-    <h1 class="sectionAbout_title">Gallery</h1>
-    <br>
+    <h1 class="sectionGalery_title">Gallery</h1>
 
     <div class="gallery">
 
