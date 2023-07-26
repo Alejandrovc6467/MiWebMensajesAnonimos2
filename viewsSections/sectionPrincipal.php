@@ -56,6 +56,7 @@ switch($accion){
 
     //Envio de datos si presino el boton registar
     $sentenciaSQL = $conexion->prepare("INSERT INTO mensajesanonimos (mensaje,fechaYhora,ip,agenteUsuario) VALUES (:mensaje,:fechaYhora,:ip,:agenteUsuario);");
+    // $sentenciaSQL = $conexion->prepare("INSERT INTO mensajesanonimos (mensaje,fechaYhora,ip,agenteUsuario) VALUES (:mensaje,NOW(),:ip,:agenteUsuario);"); es mas facil obtner la hora de la base de datos automaticamente con este NOW() y bueno claro ya no necesito la variable fechayhora que cree
     $sentenciaSQL->bindParam(':mensaje',$mensaje);
     $sentenciaSQL->bindParam(':fechaYhora',$fechaYhora);
     $sentenciaSQL->bindParam(':ip',$ip);
