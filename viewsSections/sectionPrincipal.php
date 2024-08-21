@@ -49,7 +49,7 @@ if($ip !== "186.179.65.46") {
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
     $mail->Username = 'alejandrovc177@gmail.com';
-    $mail->Password = 'izcb kowq obmi omai';
+    $mail->Password = 'key de google';
     $mail->SMTPSecure = 'ssl';
     $mail->Port = 465;
 
@@ -112,7 +112,7 @@ switch($accion){
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
         $mail->Username = 'alejandrovc177@gmail.com';
-        $mail->Password = 'izcb kowq obmi omai';
+        $mail->Password = 'key google';
         $mail->SMTPSecure = 'ssl';
         $mail->Port = 465;
 
