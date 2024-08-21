@@ -5,6 +5,13 @@
 
 include("config/conexionBD.php");
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'phpmailer/src/Exception.php';
+require 'phpmailer/src/PHPMailer.php';
+require 'phpmailer/src/SMTP.php';
+
 
 
 /**  /////////////////////  esto pertenece al registro de ingresos ////////////////////////// */
@@ -23,15 +30,50 @@ include("config/conexionBD.php");
     $agenteUsuario = $_SERVER['HTTP_USER_AGENT'];
 
     //Envio de datos si presino el boton registar
-    $sentenciaSQL = $conexion->prepare("INSERT INTO historialingresos (fechaYhoraHistorial,ip,procendenteDePagina,agenteUsuario) VALUES (:fechaYhoraHistorial,:ip,:procendenteDePagina,:agenteUsuario);");
-    $sentenciaSQL->bindParam(':fechaYhoraHistorial',$fechaYhoraHistorial);
-    $sentenciaSQL->bindParam(':ip',$ip);
-    $sentenciaSQL->bindParam(':procendenteDePagina',$procendenteDePagina);
-    $sentenciaSQL->bindParam(':agenteUsuario',$agenteUsuario);
-    $sentenciaSQL->execute();
+    if($ip !== "186.179.65.46") {
+        $sentenciaSQL = $conexion->prepare("INSERT INTO historialingresos (fechaYhoraHistorial,ip,procendenteDePagina,agenteUsuario) VALUES (:fechaYhoraHistorial,:ip,:procendenteDePagina,:agenteUsuario);");
+        $sentenciaSQL->bindParam(':fechaYhoraHistorial',$fechaYhoraHistorial);
+        $sentenciaSQL->bindParam(':ip',$ip);
+        $sentenciaSQL->bindParam(':procendenteDePagina',$procendenteDePagina);
+        $sentenciaSQL->bindParam(':agenteUsuario',$agenteUsuario);
+        $sentenciaSQL->execute();
+    }
     */
 
 /**  ///////////////////// FIN DE  esto pertenece al registro de ingresos ////////////////////////// */
+
+//envio de email de nuevo ingreso
+if($ip !== "186.179.65.46") {
+    $mail = new PHPMailer(true);
+    $mail->isSMTP();
+    $mail->Host = 'smtp.gmail.com';
+    $mail->SMTPAuth = true;
+    $mail->Username = 'alejandrovc177@gmail.com';
+    $mail->Password = 'izcb kowq obmi omai';
+    $mail->SMTPSecure = 'ssl';
+    $mail->Port = 465;
+
+    $mail->setFrom('alejandrovc177@gmail.com');
+    $mail->addAddress('alejandrovc6467@gmail.com');
+    $mail->isHTML(true);
+    $mail->Subject = 'Mensajes Anonimos (New Entry)';
+
+    $mail->Body = '
+    <html>
+    <head>
+        <title>Alguien ingreso al sitio</title>
+    </head>
+    <body>
+        <h2>Detalles del ingreso:</h2>
+        <p><strong>Fecha y Hora:</strong> ' . $fechaYhoraHistorial . '</p>
+        <p><strong>IP:</strong> ' . $ip . '</p>
+        <p><strong>Agente de Usuario:</strong> ' . $agenteUsuario . '</p>
+    </body>
+    </html>';
+
+    $mail->send();
+}
+//FIN envio de email de nuevo ingreso
 
 
 
@@ -63,7 +105,38 @@ switch($accion){
     $sentenciaSQL->bindParam(':agenteUsuario',$agenteUsuario);
     $sentenciaSQL->execute();
 
+    //envio de email
+    if($ip !== "186.179.65.46") {
+        $mail = new PHPMailer(true);
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com';
+        $mail->SMTPAuth = true;
+        $mail->Username = 'alejandrovc177@gmail.com';
+        $mail->Password = 'izcb kowq obmi omai';
+        $mail->SMTPSecure = 'ssl';
+        $mail->Port = 465;
 
+        $mail->setFrom('alejandrovc177@gmail.com');
+        $mail->addAddress('alejandrovc6467@gmail.com');
+        $mail->isHTML(true);
+        $mail->Subject = 'Mensajes Anonimos (New Message)';
+
+        $mail->Body = '
+        <html>
+        <head>
+            <title>Alguien envió un mensaje anónimo</title>
+        </head>
+        <body>
+            <h2>Detalles del mensaje anónimo:</h2>
+            <p><strong>Mensaje:</strong> ' . $mensaje . '</p>
+            <p><strong>Fecha y Hora:</strong> ' . $fechaYhora . '</p>
+            <p><strong>IP:</strong> ' . $ip . '</p>
+            <p><strong>Agente de Usuario:</strong> ' . $agenteUsuario . '</p>
+        </body>
+        </html>';
+
+        $mail->send();
+    }
 
     //limpio los campos una vez que los registre
     $mensaje ="";
